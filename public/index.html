@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Utility Pay</title>
+</head>
+<body> -->
+    
+    <!-- <div class="container mt-5">
+        <div class="text-center">
+            Display the Image
+            <img src="https://e7.pngegg.com/pngimages/795/206/png-clipart-public-utility-computer-icons-product-share-icon-practical-utility-angle-building-thumbnail.png" alt="Utility Pay Logo" />
+        </div>
+        
+        <h1 class="text-center mt-3">Welcome to Utility Pay</h1>
+        <p class="text-center">A simple solution to pay your utility bills</p>
+        
+        <div class="text-center mt-4">
+            Google Sign-In button (integrate Google Auth if needed) -->
+            <!-- <button class="btn btn-danger" onclick="signInWithGoogle()">Sign in with Google</button>
+            <p class="mt-2">or</p>
+            <button class="btn btn-primary" onclick="redirectToPayment()">Login as Guest</button>
+        </div>
+    </div>
+
+    <script>
+        function signInWithGoogle() { -->
+            <!-- // Placeholder function - integrate Google Sign-In API here if needed
+    //         alert('Google Sign-In Coming Soon!');
+    //     }
+    //     function redirectToPayment() {
+    //         window.location.href = 'payment.html';
+    //     }
+    // </script>
+//  </body>
+// </html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Utility Pay</title>
+
+    <!-- Load the Google Identity Services library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="https://e7.pngegg.com/pngimages/795/206/png-clipart-public-utility-computer-icons-product-share-icon-practical-utility-angle-building-thumbnail.png" alt="Utility Pay Logo" />
+        </div>
+        
+        <h1 class="text-center mt-3">Welcome to Utility Pay</h1>
+        <p class="text-center">A simple solution to pay your utility bills</p>
+        
+        <div class="text-center mt-4">
+            <div id="g_id_onload"
+                 data-client_id="181812828027-b9qg6phgbkbiasum4r2b2tcu3akdomdt.apps.googleusercontent.com" 
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin custom-google-button"></div>
+            
+            <p class="mt-2">or</p>
+            <button class="btn btn-primary" onclick="redirectToPayment()">Login as Guest</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            alert("Successfully signed in with Google!");
+            // Redirect or handle user information here
+            redirectToPayment();
+        }
+
+        function redirectToPayment() {
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>
+
+
+
+ 
